@@ -2,8 +2,10 @@
 Programa busca_sequencial.py
 Descrição: Este programa busca um valor em uma base de dados.
 Autor: André Azevedo Spader
-Versão: 0.0.2
-Correções: informações mais precisas de que o valor encontrado é um CPF
+Versão: 0.0.3
+Correções: 
+1. Informações mais precisas de que o valor encontrado é um CPF
+2. Não se informa mais a posição onde o CPF foi encontrado no banco de dados, mas essa versão é mais rápida e legível que a versão anterior.
 data: 19/04/2024
 """
 
@@ -25,15 +27,15 @@ cpf = int(input("Digite o CPF a procurar: "))
 
 # Processamento de dados
 
-while posicao < len(lista):
-    if lista[posicao] == cpf:
+for elem in lista:
+    if elem == cpf:
         achou = True
         break
-    posicao += 1 # é a mesma coisa que posicao = posicao +1
 
 # Saída de dados:
 
+
 if achou:
-    print(f"\nO CPF {cpf} foi achado na posição {posicao + 1}")
+    print(f"\nO CPF {cpf} foi achado")
 else:
     print(f"\nO CPF {cpf} não foi achado.")
