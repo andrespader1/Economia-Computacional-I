@@ -1,4 +1,4 @@
-# Programa busca sequencial
+# Programa Busca Sequencial
 
 **Descrição**: 
 Este programa busca um valor em uma base de dados.
